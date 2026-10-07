@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prof. R. Mahalakshmi | Historian, Author & Scholar</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#0b0c10',
+              dark: '#12141a',
+              card: '#1a1d26',
+              border: '#2a2f3d',
+              gold: '#c9a86b',
+              goldHover: '#e5c382',
+              cream: '#f9f8f3',
+              muted: '#9ca3af'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0c10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2f3d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c9a86b;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f3e7c4 0%, #c9a86b 50%, #9a7b3e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow:hover {
+      box-shadow: 0 0 25px -5px rgba(201, 168, 107, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-slate-200 font-sans antialiased selection:bg-brand-gold selection:text-brand-black">
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Monogram / Brand -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-brand-gold/40 flex items-center justify-center font-serif text-brand-gold font-bold text-xl group-hover:border-brand-gold transition-colors">
+          RM
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-bold tracking-wider text-slate-100 group-hover:text-brand-gold transition-colors">R. MAHALAKSHMI</span>
+          <span class="text-[10px] tracking-widest text-slate-400 uppercase font-sans">JNU • Historian</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="#about" class="text-slate-300 hover:text-brand-gold transition-colors">About</a>
+        <a href="#books" class="text-slate-300 hover:text-brand-gold transition-colors">Books</a>
+        <a href="#specialization" class="text-slate-300 hover:text-brand-gold transition-colors">Research Themes</a>
+        <a href="#media" class="text-slate-300 hover:text-brand-gold transition-colors">Lectures & Media</a>
+        <a href="#cv-publications" class="text-slate-300 hover:text-brand-gold transition-colors">Publications & Teaching</a>
+        <a href="#contact" class="px-5 py-2 rounded-full border border-brand-gold/60 text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all font-semibold">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-brand-gold focus:outline-none text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-dark border-b border-brand-border px-6 py-6 space-y-4">
+      <a href="#about" class="block text-slate-300 hover:text-brand-gold transition-colors">About</a>
+      <a href="#books" class="block text-slate-300 hover:text-brand-gold transition-colors">Books</a>
+      <a href="#specialization" class="block text-slate-300 hover:text-brand-gold transition-colors">Research Themes</a>
+      <a href="#media" class="block text-slate-300 hover:text-brand-gold transition-colors">Lectures & Media</a>
+      <a href="#cv-publications" class="block text-slate-300 hover:text-brand-gold transition-colors">Publications & Teaching</a>
+      <a href="#contact" class="inline-block px-5 py-2 rounded-full border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-brand-black via-brand-dark to-brand-black relative overflow-hidden">
+    <!-- Ambient Background Lighting -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Typography & Bio -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase">
+            <i class="fa-solid fa-landmark text-xs"></i> Centre for Historical Studies, JNU
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl xl:text-7xl font-semibold leading-[1.1] text-slate-100">
+            PROF. R. <br/>
+            <span class="gold-gradient-text italic font-normal">MAHALAKSHMI</span>
+          </h1>
+
+          <p class="font-serif text-xl sm:text-2xl italic text-slate-300 font-light border-l-2 border-brand-gold pl-6 py-1">
+            "Interrogating state structures, gender dynamics, and sacred traditions across pre-modern South Asian history."
+          </p>
+
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed font-light">
+            Professor of History at the Centre for Historical Studies, School of Social Sciences, Jawaharlal Nehru University, New Delhi. Renowned scholar on early medieval South India, Tamil cultural influences in Sri Lanka, and the evolution of Brahmanical and Buddhist iconography and religious institutions.
+          </p>
+
+          <!-- Key Quick Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-brand-border/60">
+            <div>
+              <span class="block text-2xl sm:text-3xl font-serif font-bold text-brand-gold">25+</span>
+              <span class="text-xs uppercase tracking-wider text-slate-400">Years Academic Career</span>
+            </div>
+            <div>
+              <span class="block text-2xl sm:text-3xl font-serif font-bold text-brand-gold">02</span>
+              <span class="text-xs uppercase tracking-wider text-slate-400">Monograph Books</span>
+            </div>
+            <div>
+              <span class="block text-2xl sm:text-3xl font-serif font-bold text-brand-gold">IHC</span>
+              <span class="text-xs uppercase tracking-wider text-slate-400">Hira Lal Gupta Award</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#books" class="px-8 py-3.5 rounded-full bg-brand-gold text-brand-black font-semibold text-sm hover:bg-brand-goldHover transition-all shadow-lg shadow-brand-gold/10">
+              Explore Books <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+            <a href="http://www.jnu.ac.in/Faculty/mahalakshmi/cv.pdf" target="_blank" class="px-8 py-3.5 rounded-full border border-brand-border text-slate-300 hover:border-brand-gold hover:text-brand-gold transition-all text-sm font-medium flex items-center gap-2">
+              <i class="fa-regular fa-file-pdf"></i> Download Official CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile Portrait Frame -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Decorative Gold Frame Offsets -->
+            <div class="absolute -inset-2 rounded-2xl border border-brand-gold/30 translate-x-3 translate-y-3 pointer-events-none"></div>
+            
+            <div class="relative bg-brand-card rounded-2xl overflow-hidden border border-brand-border shadow-2xl group">
+              <!-- Academic Image Container -->
+              <img src="Screen Shot 2026-10-07 at 11.33.15 AM.png" 
+                   onerror="this.onerror=null; this.src='https://placehold.co/600x750/1a1d26/c9a86b?text=Prof.+R.+Mahalakshmi';" 
+                   alt="Prof. R. Mahalakshmi Portrait" 
+                   class="w-full h-[480px] sm:h-[520px] object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700" />
+              
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent p-6 pt-12">
+                <span class="text-xs text-brand-gold uppercase tracking-widest block font-medium">Jawaharlal Nehru University</span>
+                <p class="text-slate-200 font-serif text-lg font-semibold">Prof. R. Mahalakshmi</p>
+                <p class="text-xs text-slate-400">Ph.D. JNU (2006) • M.Phil (1995) • M.A. (1993)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Books Showcase Section (Harari Style) -->
+  <section id="books" class="py-24 bg-brand-dark border-y border-brand-border relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">Major Publications</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-slate-100">Authored Monographs</h2>
+        <div class="w-16 h-0.5 bg-brand-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        
+        <!-- Book 1 -->
+        <div class="bg-brand-card rounded-2xl p-8 border border-brand-border flex flex-col md:flex-row gap-8 items-center gold-border-glow transition-all duration-300">
+          <div class="w-48 sm:w-56 shrink-0 shadow-2xl relative group">
+            <!-- Simulated 3D Book Cover -->
+            <div class="aspect-[2/3] bg-gradient-to-br from-amber-950 via-neutral-900 to-black rounded-lg border border-amber-500/30 p-5 flex flex-col justify-between text-center relative overflow-hidden shadow-2xl">
+              <div class="absolute inset-0 bg-brand-gold/10 opacity-30"></div>
+              <div class="relative z-10">
+                <span class="text-[9px] uppercase tracking-widest text-amber-300 block mb-2">Penguin India</span>
+                <h3 class="font-serif text-lg font-bold text-amber-100 leading-tight">The Making of the Goddess</h3>
+                <p class="text-[10px] italic text-amber-200/80 mt-1">Korravai-Durga in the Tamil Traditions</p>
+              </div>
+              <div class="relative z-10 mt-6 border-t border-amber-500/30 pt-3">
+                <p class="text-[10px] tracking-wider text-amber-400 font-serif">R. MAHALAKSHMI</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 flex-1">
+            <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 text-[11px] font-medium px-3 py-1 rounded-full inline-block">
+              <i class="fa-solid fa-trophy text-amber-400 mr-1"></i> Prof. Hira Lal Gupta Award 2013
+            </span>
+            <h3 class="font-serif text-2xl font-bold text-slate-100">The Making of the Goddess: Korravai-Durga in the Tamil Traditions</h3>
+            <p class="text-xs text-brand-gold font-medium uppercase tracking-wider">Penguin India, Delhi • 2011</p>
+            <p class="text-slate-300 text-sm leading-relaxed font-light">
+              An authoritative investigation into the origins, evolution, and transformation of the warlike Tamil deity Korravai into Durga in early medieval South India (c. AD 600–1300).
+            </p>
+            <div class="pt-2 flex items-center gap-4">
+              <button onclick="openBookModal('goddess')" class="text-xs text-brand-gold font-semibold hover:underline flex items-center gap-1">
+                Read Synopsis & Citation <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bg-brand-card rounded-2xl p-8 border border-brand-border flex flex-col md:flex-row gap-8 items-center gold-border-glow transition-all duration-300">
+          <div class="w-48 sm:w-56 shrink-0 shadow-2xl relative group">
+            <!-- Simulated 3D Book Cover -->
+            <div class="aspect-[2/3] bg-gradient-to-br from-yellow-950 via-stone-900 to-slate-950 rounded-lg border border-amber-400/30 p-5 flex flex-col justify-between text-center relative overflow-hidden shadow-2xl">
+              <div class="absolute inset-0 bg-amber-400/10 opacity-30"></div>
+              <div class="relative z-10">
+                <span class="text-[9px] uppercase tracking-widest text-amber-200 block mb-2">Penguin Viking</span>
+                <h3 class="font-serif text-lg font-bold text-amber-100 leading-tight">The Book of Lakshmi</h3>
+                <p class="text-[10px] italic text-amber-200/80 mt-1">Myth, Iconography & Devotion</p>
+              </div>
+              <div class="relative z-10 mt-6 border-t border-amber-400/30 pt-3">
+                <p class="text-[10px] tracking-wider text-amber-300 font-serif">R. MAHALAKSHMI</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 flex-1">
+            <span class="bg-brand-gold/10 text-brand-gold border border-brand-gold/30 text-[11px] font-medium px-3 py-1 rounded-full inline-block">
+              Monograph Publication
+            </span>
+            <h3 class="font-serif text-2xl font-bold text-slate-100">The Book of Lakshmi</h3>
+            <p class="text-xs text-brand-gold font-medium uppercase tracking-wider">Penguin Viking, Delhi • 2009</p>
+            <p class="text-slate-300 text-sm leading-relaxed font-light">
+              Explores the multidimensional divinity Lakshmi—from early agrarian fertility associations to her consolidation as the paramount deity of prosperity, royalty, and Vishnu's divine consort.
+            </p>
+            <div class="pt-2 flex items-center gap-4">
+              <button onclick="openBookModal('lakshmi')" class="text-xs text-brand-gold font-semibold hover:underline flex items-center gap-1">
+                Read Synopsis & Citation <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Awards Highlight Strip -->
+      <div class="mt-12 p-6 rounded-xl bg-brand-black border border-brand-border flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-brand-gold/10 border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl shrink-0">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-bold text-slate-100">Prof. Hira Lal Gupta Research Award</h4>
+            <p class="text-xs text-slate-400">Awarded by the Indian History Congress (74th Session, 2013) for outstanding research work published by an Indian woman historian.</p>
+          </div>
+        </div>
+        <a href="#cv-publications" class="px-5 py-2.5 rounded-lg border border-brand-border hover:border-brand-gold text-slate-300 text-xs font-semibold whitespace-nowrap transition-all">
+          View All Awards & Fellowships
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research Themes & Ideas (Grid Layout) -->
+  <section id="specialization" class="py-24 bg-brand-black relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">Scholarship & Inquiry</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-slate-100 mt-2">Areas of Specialization</h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md font-light">
+          Deep thematic exploration into political economy, religious art history, gender discourse, and trans-regional exchanges in pre-modern South Asia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Theme 1 -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-gold text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+            <i class="fa-solid fa-chess-king"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Early Medieval State Structures</h3>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Analysis of political formation, Chola state legitimacy, revenue systems, and socio-economic dynamics across Tamilakam and South India.
+          </p>
+        </div>
+
+        <!-- Theme 2 -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-gold text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+            <i class="fa-solid fa-venus"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Gender & Patriarchy in Early India</h3>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Critically interrogating women's roles, family structures, female ascetic traditions (such as Karaikkal Ammaiyar), and goddess worship in Cankam literature and Tamil Bhakti.
+          </p>
+        </div>
+
+        <!-- Theme 3 -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-gold text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+            <i class="fa-solid fa-vihara"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Brahmanical & Buddhist Sacred Art</h3>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Development of structural shrines, iconographic lineages, and temple architecture in South Asia and Southeast Asia.
+          </p>
+        </div>
+
+        <!-- Theme 4 -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-gold text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Tamil & Sri Lankan Cultural Contacts</h3>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Historical linkages between Tamilakam and Sri Lanka (c. 300 BCE – 1300 CE), backed by field research supported by the Indo-Sri Lanka Foundation.
+          </p>
+        </div>
+
+        <!-- Theme 5 -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-gold text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+            <i class="fa-solid fa-people-roof"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Brahmanical / Tribal Interactions</h3>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Tribal histories in pre-modern South Asia, highlighting assimilation, conflict, and religious syncretism between indigenous communities and institutionalized traditions.
+          </p>
+        </div>
+
+        <!-- Theme 6 -->
+        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-gold text-xl mb-6 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+            <i class="fa-solid fa-book-journal-whills"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Historiography & Epistemology</h3>
+          <p class="text-slate-400 text-sm leading-relaxed font-light">
+            Methodological appraisals of ancient text traditions, Cankam literary prisms, oral histories, and colonial comparative frameworks (including Korea-India comparative studies).
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Media & Video Lectures Hub -->
+  <section id="media" class="py-24 bg-brand-dark border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">Public Intellectual Discourse</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-slate-100 mt-2">Lectures & Video Keynotes</h2>
+        </div>
+        <div class="flex items-center gap-2 text-red-500 font-semibold text-sm">
+          <i class="fa-brands fa-youtube text-lg"></i> YouTube Embed Archive
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <!-- Video 1 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col group">
+          <div class="relative aspect-video bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/wD2j1LGuRwo" title="Unlocking the Past: Why History Matters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold block mb-1">SRM University AP Keynote</span>
+              <h3 class="font-serif text-xl font-bold text-slate-100 group-hover:text-brand-gold transition-colors">Unlocking the Past: Why History Matters</h3>
+              <p class="text-slate-400 text-xs mt-2 font-light leading-relaxed">
+                Prof. R. Mahalakshmi delivers an insightful address unpacking historical methodology, critical thinking, and the contemporary relevance of ancient historical inquiry.
+              </p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=wD2j1LGuRwo" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold hover:underline">
+              Watch on YouTube <i class="fa-solid fa-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col group">
+          <div class="relative aspect-video bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/DcibVFQbPo8" title="Polity and Religion in Early India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold block mb-1">Sahapedia Academic Talk</span>
+              <h3 class="font-serif text-xl font-bold text-slate-100 group-hover:text-brand-gold transition-colors">Interplay Between Polity & Religion in Early India</h3>
+              <p class="text-slate-400 text-xs mt-2 font-light leading-relaxed">
+                An exploration into political legitimation, temple institutions, and state formation across early medieval South Indian dynasties.
+              </p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=DcibVFQbPo8" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold hover:underline">
+              Watch on YouTube <i class="fa-solid fa-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col group">
+          <div class="relative aspect-video bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/gXmBW8ztkos" title="Orality and History" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold block mb-1">Methodology & Historiography</span>
+              <h3 class="font-serif text-xl font-bold text-slate-100 group-hover:text-brand-gold transition-colors">Orality and History: Methodological Concerns</h3>
+              <p class="text-slate-400 text-xs mt-2 font-light leading-relaxed">
+                Examining the intersection of oral traditions, sacred folklore, and literary texts in reconstructing pre-modern history.
+              </p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=gXmBW8ztkos" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold hover:underline">
+              Watch on YouTube <i class="fa-solid fa-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col group">
+          <div class="relative aspect-video bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/q8fOnRNB6rE" title="Academic Lecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold block mb-1">Featured Academic Session</span>
+              <h3 class="font-serif text-xl font-bold text-slate-100 group-hover:text-brand-gold transition-colors">Special Lecture & Panel Discussion</h3>
+              <p class="text-slate-400 text-xs mt-2 font-light leading-relaxed">
+                Panel presentation addressing gender historiography, temple economy, and cultural history in early South Asian societies.
+              </p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=q8fOnRNB6rE" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold text-brand-gold hover:underline">
+              Watch on YouTube <i class="fa-solid fa-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Publications & CV Explorer -->
+  <section id="cv-publications" class="py-24 bg-brand-black">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">Academic Record</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-slate-100">Publications & Teaching</h2>
+        <p class="text-slate-400 text-sm font-light">Explore representative articles, research chapters, and courses offered at JNU.</p>
+      </div>
+
+      <!-- Tab Navigation Control Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2 border-b border-brand-border pb-6 mb-10">
+        <button onclick="switchTab('articles')" id="tab-articles" class="tab-btn active px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-brand-gold text-brand-black">
+          Selected Articles
+        </button>
+        <button onclick="switchTab('courses')" id="tab-courses" class="tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-slate-200">
+          Courses Taught
+        </button>
+        <button onclick="switchTab('grants')" id="tab-grants" class="tab-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-slate-200">
+          Grants & Projects
+        </button>
+      </div>
+
+      <!-- Tab 1: Selected Articles -->
+      <div id="content-articles" class="tab-content block space-y-4 max-w-4xl mx-auto">
+        
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border hover:border-brand-gold/40 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Book Chapter • 2013</span>
+              <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">'Intimately Bound: Woman and Family in early Tamil History, c. 300 BCE – 1300 CE'</h4>
+              <p class="text-slate-400 text-xs mt-2">In Saxena, Ashish, ed., <em>Mapping Marginality and Social Justice</em>, Rawat Publication, Jaipur, 2013.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border hover:border-brand-gold/40 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Introductory Essay • 2013</span>
+              <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">'Introduction to the Life and Work of Ananda Coomaraswamy'</h4>
+              <p class="text-slate-400 text-xs mt-2">In Coomaraswamy, Ananda, <em>The Dance of Shiva</em>, revised edition with a new introduction, Rupa and Co., Delhi, 2013.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border hover:border-brand-gold/40 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Studies in History Journal • 2011</span>
+              <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">'Benevolent Consort or Dangerous Adversary? The Accommodation of the Goddess in the Hymns of Saint Appar'</h4>
+              <p class="text-slate-400 text-xs mt-2"><em>Studies in History</em>, August 2011, 27: 2, pp. 269–280.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border hover:border-brand-gold/40 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Asian Research Trends • 2011</span>
+              <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">'Political Economy and Society in India: A Historiographical Survey'</h4>
+              <p class="text-slate-400 text-xs mt-2"><em>Asian Research Trends New Series</em>, Toyo Bunko, No. 6, pp. 23–50.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border hover:border-brand-gold/40 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">ICPR & Pearson • 2009</span>
+              <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">'Caṅkam Literature as a Social Prism'</h4>
+              <p class="text-slate-400 text-xs mt-2">In B.D. Chattopadhyaya (ed.), <em>Social History of India in the First Millenium AD</em>, ICPR & Pearson, Delhi, pp. 29–42.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border hover:border-brand-gold/40 transition-all">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Studies in History Journal • 2000</span>
+              <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">'Outside the Norm, Within the Tradition: Kāraikkāl Ammaiyar and the Ideology of Tamil Bhakti'</h4>
+              <p class="text-slate-400 text-xs mt-2"><em>Studies in History</em>, 16:1, pp. 17–40.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tab 2: Courses Taught -->
+      <div id="content-courses" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border">
+          <h4 class="font-serif text-lg font-bold text-brand-gold border-b border-brand-border pb-3 mb-4">
+            <i class="fa-solid fa-graduation-cap mr-2"></i> M.A. Core & Lecture Courses
+          </h4>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Ancient Society</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Aspects of Indian Art and Architecture</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Religion and Society in Early India</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Religion and Society in South India</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> The Cola State: Power and Legitimacy</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> State, Society and Economy in Sri Lanka (c. 300 BCE–1300 CE)</li>
+          </ul>
+        </div>
+
+        <div class="bg-brand-card p-6 rounded-xl border border-brand-border">
+          <h4 class="font-serif text-lg font-bold text-brand-gold border-b border-brand-border pb-3 mb-4">
+            <i class="fa-solid fa-users-rectangle mr-2"></i> M.A. / M.Phil Seminar & Language
+          </h4>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Seminar: Religion and Society in Early India</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Seminar: Religion and Society in South India</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> Seminar: Aspects of Indian Art and Architecture</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gold text-xs"></i> English as an Additional Language (EAL) Support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab 3: Grants & Collaborations -->
+      <div id="content-grants" class="tab-content hidden space-y-4 max-w-4xl mx-auto">
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border">
+          <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">International Collaboration</span>
+          <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">India and Korea: A Comparative Study of Colonialism</h4>
+          <p class="text-slate-400 text-xs mt-2">Co-Director with Prof. Vyjyanthi Raghavan (Centre for Korean Studies, JNU). Funded by the Academy of Korean Studies (AKS), Korea.</p>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border">
+          <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Field Research Grant • Indo-Sri Lanka Foundation</span>
+          <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">Sri Lanka Historical & Archaeological Student Field Study</h4>
+          <p class="text-slate-400 text-xs mt-2">Led academic field trips to Sri Lanka (December 2012, August 2011) investigating trans-oceanic Tamil-Sinhalese historical encounters.</p>
+        </div>
+
+        <div class="p-6 bg-brand-card rounded-xl border border-brand-border">
+          <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">ICHR Grant & ASIHSS Fieldwork</span>
+          <h4 class="font-serif text-lg font-bold text-slate-100 mt-1">Tribal & Temple Architectural Surveys</h4>
+          <p class="text-slate-400 text-xs mt-2">Fieldwork grants across Jharkhand (2008–2009) and Chennai/Pondicherry (2007) via the Departmental Special Assistance Programme, CHS, JNU.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Academic Profile Footer -->
+  <footer id="contact" class="bg-brand-dark border-t border-brand-border pt-20 pb-12 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-brand-border">
+        
+        <!-- Left: Brand Statement -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full border border-brand-gold flex items-center justify-center font-serif text-brand-gold font-bold text-lg">
+              RM
+            </div>
+            <span class="font-serif text-xl font-bold tracking-wider text-slate-100">PROF. R. MAHALAKSHMI</span>
+          </div>
+          <p class="text-slate-400 text-sm font-light max-w-md leading-relaxed">
+            Centre for Historical Studies, School of Social Sciences<br/>
+            Jawaharlal Nehru University, New Delhi – 110067, India.
+          </p>
+          <div class="pt-2">
+            <a href="http://www.jnu.ac.in/Faculty/mahalakshmi/cv.pdf" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-gold/10 border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all text-xs font-semibold">
+              <i class="fa-solid fa-download"></i> Official Faculty Curriculum Vitae (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Directory -->
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+            <span class="text-[10px] text-brand-gold uppercase tracking-widest block font-semibold mb-1">Office Location</span>
+            <p class="text-sm font-semibold text-slate-200">Room No. 103, SSS 1</p>
+            <p class="text-xs text-slate-400 mt-1">CHS, Jawaharlal Nehru University</p>
+          </div>
+
+          <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+            <span class="text-[10px] text-brand-gold uppercase tracking-widest block font-semibold mb-1">Direct Phone</span>
+            <p class="text-sm font-semibold text-slate-200">+91-11-26704475</p>
+            <p class="text-xs text-slate-400 mt-1">Office Extension</p>
+          </div>
+
+          <div class="bg-brand-card p-5 rounded-xl border border-brand-border sm:col-span-2">
+            <span class="text-[10px] text-brand-gold uppercase tracking-widest block font-semibold mb-1">Official Email Addresses</span>
+            <p class="text-sm font-mono text-slate-200 select-all">rmahalakshmi[at]mail[dot]jnu[dot]ac[dot]in</p>
+            <p class="text-sm font-mono text-slate-400 select-all mt-1">mahaarakesh[at]gmail[dot]com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© <span id="year"></span> Prof. R. Mahalakshmi. All Rights Reserved.</p>
+        <p>Faculty Page • Centre for Historical Studies, JNU</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Modal Component for Book Details -->
+  <div id="bookModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-card border border-brand-border w-full max-w-xl rounded-2xl p-8 relative space-y-6">
+      <button onclick="closeBookModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-100 text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modalContent">
+        <!-- Content inserted dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Set Current Year
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Mobile Menu Toggle Logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Tab Switcher Functionality
+    function switchTab(tabKey) {
+      // Hide all contents
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('block'));
+
+      // Deactivate button styling
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-gold', 'text-brand-black');
+        btn.classList.add('text-slate-400');
+      });
+
+      // Activate clicked tab
+      const activeContent = document.getElementById(`content-${tabKey}`);
+      if(activeContent) {
+        activeContent.classList.remove('hidden');
+        if(tabKey === 'courses') {
+          activeContent.classList.add('grid');
+        } else {
+          activeContent.classList.add('block');
+        }
+      }
+
+      const activeBtn = document.getElementById(`tab-${tabKey}`);
+      if(activeBtn) {
+        activeBtn.classList.add('bg-brand-gold', 'text-brand-black');
+        activeBtn.classList.remove('text-slate-400');
+      }
+    }
+
+    // Modal Details Data
+    const bookData = {
+      goddess: {
+        title: "The Making of the Goddess: Korravai-Durga in the Tamil Traditions",
+        publisher: "Penguin India, Delhi (2011)",
+        award: "Winner of Prof. Hira Lal Gupta Research Award 2013",
+        synopsis: "This groundbreaking monograph traces the transformation of Korravai, the ancient Tamil goddess of war and desert tracts, into Durga within the pan-Indian Brahmanical framework between AD 600 and 1300. Drawing upon Cankam literature, Tamil Bhakti hymns, and temple iconography, Prof. Mahalakshmi illustrates how local cults negotiated and merged into mainstream royal traditions.",
+        citation: "Mahalakshmi, R. (2011). The Making of the Goddess: Korravai-Durga in the Tamil Traditions. New Delhi: Penguin Books India."
+      },
+      lakshmi: {
+        title: "The Book of Lakshmi",
+        publisher: "Penguin Viking, Delhi (2009)",
+        award: "Monograph Publication",
+        synopsis: "The book provides a historicized examination of Lakshmi, tracing her origins from pre-Vedic fertility and agricultural symbolism to her standing as the goddess of wealth, sovereignty, and Vishnu's consort in medieval Puranic and Agamic traditions across South Asia.",
+        citation: "Mahalakshmi, R. (2009). The Book of Lakshmi. New Delhi: Penguin Viking."
+      }
+    };
+
+    function openBookModal(key) {
+      const modal = document.getElementById('bookModal');
+      const container = document.getElementById('modalContent');
+      const data = bookData[key];
+
+      if(data) {
+        container.innerHTML = `
+          <span class="text-xs text-brand-gold font-semibold uppercase tracking-widest">${data.award}</span>
+          <h3 class="font-serif text-2xl font-bold text-slate-100 mt-1">${data.title}</h3>
+          <p class="text-xs text-slate-400 font-medium">${data.publisher}</p>
+          <div class="h-px bg-brand-border my-4"></div>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">${data.synopsis}</p>
+          <div class="bg-brand-black p-4 rounded-lg border border-brand-border mt-4">
+            <span class="text-[10px] uppercase text-slate-500 font-bold tracking-wider block mb-1">Recommended Citation</span>
+            <p class="text-xs font-mono text-slate-300">${data.citation}</p>
+          </div>
+        `;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeBookModal() {
+      const modal = document.getElementById('bookModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Close modal on outside backdrop click
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('bookModal');
+      if (e.target === modal) {
+        closeBookModal();
+      }
+    });
+  </script>
+</body>
+</html>
