@@ -1,72 +1,441 @@
-<!-- Hero Cover Page Section -->
-<header class="min-h-screen bg-parchment flex flex-col justify-center py-16 px-6 lg:px-12 border-b border-stoneBorder relative">
-    <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Text & Titles -->
-        <div class="lg:col-span-7 space-y-6">
-            <span class="text-bronze text-sm uppercase tracking-widest font-bold block">Academic Profile</span>
-            
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink leading-tight">
-                Prof. R. Mahalakshmi
-            </h1>
-            
-            <p class="font-serif text-xl sm:text-2xl text-ink/80 italic font-medium leading-relaxed border-l-2 border-bronze pl-4">
-                Historian & Professor of Ancient & Early Medieval South Asia
-            </p>
-            
-            <div class="text-sm text-inkMuted space-y-1 pt-2">
-                <p class="font-medium text-ink">Center for Historical Studies</p>
-                <p>Jawaharlal Nehru University (JNU), New Delhi</p>
-            </div>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. R. Mahalakshmi | Historian & Professor of Ancient & Early Medieval South Asia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parchment: '#FBF9F5',
+                        warmWhite: '#FFFFFF',
+                        alabaster: '#F4F1EA',
+                        stoneBorder: '#E2DDD3',
+                        ink: '#1A1816',
+                        inkMuted: '#524E48',
+                        bronze: '#8C6D3B',
+                        bronzeLight: '#FAF6EF'
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .academic-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .academic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(26, 24, 22, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-parchment text-ink font-sans antialiased selection:bg-bronze selection:text-warmWhite">
 
-            <!-- Action Buttons / Links -->
-            <div class="pt-4 flex flex-wrap gap-4">
-                <a href="#about" class="px-6 py-3 bg-ink text-parchment text-xs uppercase tracking-wider font-bold hover:bg-bronze transition duration-300">
-                    Read Biography ↓
-                </a>
-                <a href="#publications" class="px-6 py-3 border border-stoneBorder text-ink text-xs uppercase tracking-wider font-bold hover:border-bronze hover:text-bronze transition duration-300">
-                    View Research & Books
-                </a>
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-parchment/90 backdrop-blur-md border-b border-stoneBorder transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-tight text-ink hover:text-bronze transition duration-300">
+                R. Mahalakshmi
+            </a>
+            
+            <nav class="flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest text-inkMuted">
+                <a href="#about" class="hover:text-bronze transition duration-300">Biography</a>
+                <a href="#publications" class="hover:text-bronze transition duration-300">Books</a>
+                <a href="#commentary" class="hover:text-bronze transition duration-300">Public Engagement</a>
+                <a href="#contact" class="hover:text-bronze transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Hero Cover Page Section -->
+        <section class="min-h-[85vh] bg-parchment flex flex-col justify-center py-16 px-6 lg:px-12 border-b border-stoneBorder relative">
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text / Titles -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-bronze text-xs uppercase tracking-widest font-bold block">Academic Profile</span>
+                    
+                    <h1 class="font-serif text-5xl sm:text-6xl font-bold text-ink leading-tight">
+                        Prof. R. Mahalakshmi
+                    </h1>
+                    
+                    <p class="font-serif text-2xl sm:text-3xl text-ink/80 italic font-medium leading-relaxed border-l-2 border-bronze pl-4">
+                        Historian, Professor of Ancient & Early Medieval South Asia
+                    </p>
+                    
+                    <div class="text-sm text-inkMuted space-y-1 pt-2">
+                        <p class="font-medium text-ink">Centre for Historical Studies</p>
+                        <p>Jawaharlal Nehru University (JNU), New Delhi</p>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="#about" class="px-6 py-3 bg-ink text-warmWhite text-xs uppercase tracking-wider font-bold hover:bg-bronze transition duration-300 shadow-md">
+                            Read Biography ↓
+                        </a>
+                        <a href="#publications" class="px-6 py-3 border border-stoneBorder text-ink text-xs uppercase tracking-wider font-bold hover:border-bronze hover:text-bronze transition duration-300">
+                            View Research & Books
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Two Images Side-by-Side -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="aspect-[3/4] bg-warmWhite border border-stoneBorder overflow-hidden shadow-sm p-1">
+                        <img src="cover-photo-1.jpg" alt="Prof. R. Mahalakshmi" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-[3/4] bg-warmWhite border border-stoneBorder overflow-hidden shadow-sm p-1 mt-6">
+                        <img src="cover-photo-2.jpg" alt="Prof. R. Mahalakshmi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section id="about" class="py-24 px-6 lg:px-12 bg-alabaster border-b border-stoneBorder">
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <div class="border-b border-stoneBorder/60 pb-6">
+                    <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Overview</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Biography</h2>
+                </div>
+
+                <div class="text-inkMuted text-base sm:text-lg leading-relaxed space-y-6">
+                    <p>
+                        R. Mahalakshmi is Professor at the Centre for Historical Studies, Jawaharlal Nehru University, New Delhi. Her research interests encompass the development of state institutions, as well as religious and artistic traditions across ancient and early medieval India, Nepal, and Sri Lanka.
+                    </p>
+                    <p>
+                        Her monograph <em>The Making of the Goddess: Korravai-Durgā in the Tamil Traditions</em> (Penguin, 2011) was awarded the Professor Hiralal Gupta Prize for the Best Book by a Woman Historian by the Indian History Congress. She is also the author of <em>The Book of Lakshmi</em> (Penguin, 2009) and editor of <em>Art and History: Texts, Contexts and Visual Representations in Ancient and Early Medieval India</em> (Bloomsbury, 2020).
+                    </p>
+                    <p>
+                        Elected President of the Ancient India Section of the Indian History Congress (2024), her ongoing projects examine performative traditions in early Tamil Nadu and the history of the Cholas.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-24 px-6 lg:px-12 bg-warmWhite border-b border-stoneBorder">
+            <div class="max-w-7xl mx-auto space-y-16">
+                
+                <!-- Category 1: Authored Books -->
+                <div>
+                    <div class="mb-10 border-b border-stoneBorder/60 pb-6">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Monographs</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Authored Books</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
+                        
+                        <!-- Book 1 -->
+                        <div class="academic-card bg-parchment border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="making-of-goddess.jpg" alt="The Making of the Goddess" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2 py-0.5 rounded bg-bronze/10 text-bronze border border-bronze/20">Sole Author</span>
+                                    <span class="text-inkMuted">2011</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    The Making of the Goddess: Korravai-Durga in the Tamil Traditions
+                                </h3>
+                                <p class="text-xs text-bronze font-semibold mb-3">Penguin India (Gurgaon)</p>
+                                <p class="text-inkMuted text-sm leading-relaxed mb-4">
+                                    Traces the evolution of the goddess deity in Tamil society. Awarded the Professor Hiralal Gupta Prize by the Indian History Congress.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 2 -->
+                        <div class="academic-card bg-parchment border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="book-of-lakshmi.jpg" alt="The Book of Lakshmi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2 py-0.5 rounded bg-bronze/10 text-bronze border border-bronze/20">Sole Author</span>
+                                    <span class="text-inkMuted">2009</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    The Book of Lakshmi
+                                </h3>
+                                <p class="text-xs text-bronze font-semibold mb-3">Penguin Viking (Gurgaon)</p>
+                                <p class="text-inkMuted text-sm leading-relaxed mb-4">
+                                    Explores the mythical and historical development of the Hindu goddess Lakshmi through ancient texts and iconography.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Category 2: Edited and Co-authored Volumes -->
+                <div>
+                    <div class="mb-10 border-b border-stoneBorder/60 pb-6">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Edited & Collaborative Works</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Edited and Co-authored Volumes</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        
+                        <!-- Book 3 -->
+                        <div class="academic-card bg-parchment border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="goddesses-south-asia.jpg" alt="Goddesses in South Asia" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2 py-0.5 rounded bg-stone-800/10 text-stone-800 border border-stone-800/20">Co-Editor</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    Goddesses in South Asia: Traditions and Transformations
+                                </h3>
+                                <p class="text-xs text-bronze font-semibold mb-3">Co-edited with Malavika Binny & Megha Yadav</p>
+                                <p class="text-inkMuted text-sm leading-relaxed mb-4">
+                                    Focuses on regional iterations and contemporary shifts of Hindu female deities across South Asia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 4 -->
+                        <div class="academic-card bg-parchment border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="art-and-history.jpg" alt="Art and History" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2 py-0.5 rounded bg-stone-800/10 text-stone-800 border border-stone-800/20">Editor</span>
+                                    <span class="text-inkMuted">2020</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    Art and History: Texts, Contexts and Visual Representations in Ancient and Early Medieval India
+                                </h3>
+                                <p class="text-xs text-bronze font-semibold mb-3">Bloomsbury (London)</p>
+                                <p class="text-inkMuted text-sm leading-relaxed mb-4">
+                                    An edited anthology exploring the intersections between textual prescriptions, historical contexts, and visual art.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 5 -->
+                        <div class="academic-card bg-parchment border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="economic-history.jpg" alt="The Economic History of India" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2 py-0.5 rounded bg-stone-800/10 text-stone-800 border border-stone-800/20">Co-Editor</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    The Economic History of India: Historiographical Issues and Perspectives
+                                </h3>
+                                <p class="text-xs text-bronze font-semibold mb-3">Co-edited alongside Suchandra Ghosh</p>
+                                <p class="text-inkMuted text-sm leading-relaxed mb-4">
+                                    Tribute volume in honour of Prof. Ranabir Chakravarti analyzing historiographical perspectives.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 6 -->
+                        <div class="academic-card bg-parchment border border-stoneBorder rounded-sm p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-[3/4] bg-alabaster mb-6 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="colonisation.jpg" alt="Colonisation: A Comparative Study" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
+                                    <span class="px-2 py-0.5 rounded bg-stone-800/10 text-stone-800 border border-stone-800/20">Co-Author</span>
+                                </div>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-1 leading-snug">
+                                    Colonisation: A Comparative Study Of India & Korea
+                                </h3>
+                                <p class="text-xs text-bronze font-semibold mb-3">Co-authored with Vyjayanti Raghavan</p>
+                                <p class="text-inkMuted text-sm leading-relaxed mb-4">
+                                    Comparative political evaluation examining colonial trajectories across India and Korea.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Public Engagement & Media Section -->
+        <section id="commentary" class="py-24 px-6 lg:px-12 bg-parchment border-b border-stoneBorder">
+            <div class="max-w-6xl mx-auto space-y-16">
+                
+                <!-- Articles & Commentary -->
+                <div>
+                    <div class="mb-10 border-b border-stoneBorder/60 pb-6">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Public Discourse</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Articles & Commentary</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Article 1 -->
+                        <div class="bg-warmWhite border border-stoneBorder rounded-sm p-6 hover:border-bronze transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold text-bronze uppercase tracking-widest">The Hindu</span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-ink hover:text-bronze transition duration-300">
+                                <a href="https://www.thehindu.com/news/national/kerala/attempts-to-alter-history-part-of-a-colonial-mindset-r-mahalakshmi/article66983270.ece" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2">
+                                    Attempts to Alter History Part of a Colonial Mindset ↗
+                                </a>
+                            </h3>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="bg-warmWhite border border-stoneBorder rounded-sm p-6 hover:border-bronze transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold text-bronze uppercase tracking-widest">ThePrint</span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-ink hover:text-bronze transition duration-300">
+                                <a href="https://theprint.in/opinion/yudhishtira-to-bhairava-cherished-dogs-its-about-our-civilisational-values/2724127/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2">
+                                    Yudhishtira to Bhairava, Cherished Dogs — It's About Our Civilisational Values ↗
+                                </a>
+                            </h3>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="bg-warmWhite border border-stoneBorder rounded-sm p-6 hover:border-bronze transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold text-bronze uppercase tracking-widest">Scroll.in</span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-ink hover:text-bronze transition duration-300">
+                                <a href="https://scroll.in/article/1096168/why-an-anonymous-x-post-about-anti-caste-readings-got-the-pmos-attention" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2">
+                                    Why an Anonymous X Post About Anti-Caste Readings Got the PMO's Attention ↗
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Lectures & Media -->
+                <div>
+                    <div class="mb-10 border-b border-stoneBorder/60 pb-6">
+                        <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Recorded Talks</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Lectures & Video Media</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        
+                        <!-- Video 1 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-5 flex flex-col justify-between">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=tQ7MKkwWsRY" target="_blank" rel="noopener noreferrer" class="block aspect-video bg-alabaster mb-5 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="https://img.youtube.com/vi/tQ7MKkwWsRY/hqdefault.jpg" alt="Nehru's Legacy Revisited" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </a>
+                                <span class="text-xs font-bold text-bronze uppercase tracking-wider block mb-1">Public Address</span>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-2 leading-snug">
+                                    <a href="https://www.youtube.com/watch?v=tQ7MKkwWsRY" target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition duration-300">
+                                        Nehru's Legacy Revisited: Defending Rationality, Science and Democracy
+                                    </a>
+                                </h3>
+                                <p class="text-inkMuted text-xs leading-relaxed mb-4">
+                                    A public lecture examining historical rationality, democratic principles, and scientific temper in modern Indian society.
+                                </p>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=tQ7MKkwWsRY" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-ink hover:text-bronze transition uppercase tracking-wider">
+                                    Watch on YouTube ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-5 flex flex-col justify-between">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=6tPpT9t03oc" target="_blank" rel="noopener noreferrer" class="block aspect-video bg-alabaster mb-5 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="https://img.youtube.com/vi/6tPpT9t03oc/hqdefault.jpg" alt="Unmasking Patriarchy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </a>
+                                <span class="text-xs font-bold text-bronze uppercase tracking-wider block mb-1">Interview</span>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-2 leading-snug">
+                                    <a href="https://www.youtube.com/watch?v=6tPpT9t03oc" target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition duration-300">
+                                        Unmasking Patriarchy with Prof. R. Mahalakshmi
+                                    </a>
+                                </h3>
+                                <p class="text-inkMuted text-xs leading-relaxed mb-4">
+                                    An in-depth conversation exploring gender dynamics, historical context, and patriarchy across South Asia.
+                                </p>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=6tPpT9t03oc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-ink hover:text-bronze transition uppercase tracking-wider">
+                                    Watch on YouTube ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="academic-card bg-warmWhite border border-stoneBorder rounded-sm p-5 flex flex-col justify-between">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=DcibVFQbPo8" target="_blank" rel="noopener noreferrer" class="block aspect-video bg-alabaster mb-5 overflow-hidden border border-stoneBorder relative group">
+                                    <img src="https://img.youtube.com/vi/DcibVFQbPo8/hqdefault.jpg" alt="Interplay Between Polity and Religion" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </a>
+                                <span class="text-xs font-bold text-bronze uppercase tracking-wider block mb-1">Academic Panel</span>
+                                <h3 class="font-serif text-xl font-bold text-ink mb-2 leading-snug">
+                                    <a href="https://www.youtube.com/watch?v=DcibVFQbPo8" target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition duration-300">
+                                        Interplay Between Polity and Religion in Early India
+                                    </a>
+                                </h3>
+                                <p class="text-inkMuted text-xs leading-relaxed mb-4">
+                                    A scholarly discussion analyzing state power, iconography, and religious institutions in early Indian history.
+                                </p>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=DcibVFQbPo8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-ink hover:text-bronze transition uppercase tracking-wider">
+                                    Watch on YouTube ↗
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="py-16 px-6 lg:px-12 bg-warmWhite border-t border-stoneBorder">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div>
+                <p class="font-serif text-2xl font-bold text-ink mb-2">Contact & Academic Inquiries</p>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-inkMuted">
+                    <a href="mailto:rmahalakshmi@jnu.ac.in" class="hover:text-bronze transition duration-300 underline underline-offset-4">rmahalakshmi@jnu.ac.in</a>
+                    <span class="hidden sm:inline text-stoneBorder">•</span>
+                    <a href="mailto:mahaarakesh@gmail.com" class="hover:text-bronze transition duration-300 underline underline-offset-4">mahaarakesh@gmail.com</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-8 uppercase text-xs font-semibold tracking-wider text-inkMuted">
+                <a href="https://jnu.academia.edu/MahalakshmiRamakrishnan" target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition duration-300">Academia Profile ↗</a>
+                <a href="#" class="hover:text-bronze transition duration-300">Back to Top ↑</a>
             </div>
         </div>
-
-        <!-- Two Cover Images Layout -->
-        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
-            <!-- First Image -->
-            <div class="aspect-[3/4] bg-warmWhite border border-stoneBorder overflow-hidden shadow-sm">
-                <img src="cover-photo-1.jpg" alt="Prof. R. Mahalakshmi" class="w-full h-full object-cover">
-            </div>
-            
-            <!-- Second Image (slightly offset down for an artistic aesthetic) -->
-            <div class="aspect-[3/4] bg-warmWhite border border-stoneBorder overflow-hidden shadow-sm mt-6">
-                <img src="cover-photo-2.jpg" alt="Prof. R. Mahalakshmi lecturing" class="w-full h-full object-cover">
-            </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-stoneBorder/40 text-xs text-inkMuted/60 flex justify-between items-center">
+            <p>© Prof. R. Mahalakshmi. All rights reserved.</p>
         </div>
+    </footer>
 
-    </div>
-</header>
-
-
-<!-- Biography Section (Follows directly after the Cover Page) -->
-<section id="about" class="py-24 px-6 lg:px-12 bg-alabaster border-b border-stoneBorder">
-    <div class="max-w-4xl mx-auto space-y-8">
-        
-        <div class="border-b border-stoneBorder/60 pb-6">
-            <span class="text-bronze text-xs uppercase tracking-widest font-bold block mb-1">Overview</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Biography</h2>
-        </div>
-
-        <div class="prose prose-stone max-w-none text-ink/90 text-base leading-relaxed space-y-6 font-sans">
-            <p>
-                <strong>R. Mahalakshmi</strong> is Professor at the Centre for Historical Studies, Jawaharlal Nehru University, New Delhi. Her primary areas of research interest include early historical and early medieval South Asia, religion, state formation, iconography, and gender history.
-            </p>
-            <p>
-                She is the author of seminal works such as <em>The Making of the Goddess: Korravai-Durga in the Tamil Traditions</em> (Penguin, 2011) and <em>The Book of Lakshmi</em> (Penguin, 2009). Her extensive scholarship explores the intersection of religion, royal patronage, epigraphy, and material culture in South India.
-            </p>
-            <p>
-                Professor Mahalakshmi has served as Sectional President (Ancient India) for the Indian History Congress and active executive officer in prominent academic bodies, actively contributing to public discourse on history, secularism, and democratic heritage.
-            </p>
-        </div>
-
-    </div>
-</section>
+</body>
+</html>
